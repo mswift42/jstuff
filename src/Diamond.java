@@ -1,30 +1,16 @@
-/**
- * Created by severin on 21/06/15.
- */
 public class Diamond {
     public static String print(int n) {
-        StringBuffer result = new StringBuffer();
-        if (n == 1) {
-            return "*\n";
-        } else if (n % 2 == 0) {
-            return null;
-        } else {
-            int counter = 1;
-            while (counter < n) {
-                for (int i = 1; i<counter;i++) {
-                    result.append("*");
-                }
-                result.append("\n");
-                counter+=2;
-            }
-            while (counter > 1) {
-                for (int i = counter; i>1;i--) {
-                    result.append("*");
-                }
-                result.append("\n");
-                counter-=2;
-            }
+    }
+    public String asteriskPlusPadding(int asteriks, int target) {
+        String result = "";
+        int padding;
+        padding = (int) Math.floor(target / 2.0);
+        for (int i = 0; i < padding; i++) {
+            result +=" ";
         }
-        return result.toString();
+        for (int i = 0; i<asteriks; i++) {
+            result += "*";
+        }
+        return result;
     }
 }
