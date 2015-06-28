@@ -24,4 +24,9 @@ public class DiamondTest {
 
         assertEquals(expected.toString(), Diamond.print(5));
     }
+    @Test
+    public void testPadding3() {
+        assertEquals("  *", Diamond.asteriskPlusPadding(1, 5));
+        assertEquals(" ***", Diamond.asteriskPlusPadding(3,5));
+    }
 }
